@@ -28,7 +28,7 @@ const deleteProduct = async (req, res) => {
                 cloud_name: 'newsvwek', 
                 api_key: '894636931195182', 
                 api_secret:  process.env.CLOUDINARY_API_SECRET// Click 'View API Keys' above to copy your API secret
-            });
+            }); 
 
         // Delete image from Cloudinary
         if (product.imageUrl) {

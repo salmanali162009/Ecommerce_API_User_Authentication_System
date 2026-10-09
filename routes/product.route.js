@@ -14,6 +14,9 @@ import deleteOrder from "../controller/product/deleteOrder.controller.js";
 import updateProduct from "../controller/product/updateProduct.controller.js";
 import deleteProduct from "../controller/product/deleteProduct.controller.js";
 import searchProducts from "../controller/searchProduct/searchProducts.controller.js";
+import getMySingleProduct from "../controller/product/getMySingleProduct.controller.js";
+import getSellerSingleOrder from "../controller/product/getSellerSingleOrder.controller.js";
+import getSingleOrder from "../controller/product/getSingleOrder.controller.js";
 
 const router =  express.Router()
 
@@ -81,4 +84,19 @@ router.delete(
 );
 
 router.get("/search", searchProducts);
+router.get(
+  "/my-products/:id",
+  authMiddleware,
+  getMySingleProduct
+);
+router.get(
+  "/seller-orders/:id",
+  authMiddleware,
+  getSellerSingleOrder
+);
+router.get(
+  "/orders/:id",
+  authMiddleware,
+  getSingleOrder
+);
 export default router

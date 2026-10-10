@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Order from "../../model/order.js";
+import Order from "../../model/Order.js";
 
 const getSingleOrder = async (req, res) => {
   try {
